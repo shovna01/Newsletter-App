@@ -1,6 +1,4 @@
 //jshint esversion:6
-// import "requirejs";
-// var require = require('requirejs');
 
 const express = require("express");
 const https = require("https");
@@ -9,9 +7,9 @@ const fetch = require("node-fetch");
 
 const app= express();
 
-app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
+app.use(express.static("public"));
 
 app.get("/", function(req,res){
     res.sendFile(__dirname + "/signup.html");
@@ -68,8 +66,14 @@ app.post("/failure", function(req,res){
 });
 
 
-app.listen(process.env.PORT || 3000, function(){
-    console.log("Server is running on port");
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+
+
+app.listen(port, function(){
+    console.log("Server has started running on port");
 });
 
 

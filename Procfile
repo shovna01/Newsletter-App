@@ -1,1 +1,1 @@
-web: NLapp.js
+web: node NLapp.js
