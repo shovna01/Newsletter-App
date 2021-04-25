@@ -1,4 +1,6 @@
 //jshint esversion:6
+// import "requirejs";
+// var require = require('requirejs');
 
 const express = require("express");
 const https = require("https");
@@ -67,7 +69,7 @@ app.post("/failure", function(req,res){
 
 
 app.listen(process.env.PORT || 3000, function(){
-    console.log("Server is running on port (3000) ");
+    console.log("Server is running on port");
 });
 
 

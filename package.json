@@ -4,6 +4,7 @@
   "description": "",
   "main": "NLapp.js",
   "scripts": {
+    "start": "NLapp.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Shovna",
